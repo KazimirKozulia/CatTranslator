@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "隐私政策";
+"bottomButtonRestore.text" = "恢复";
+"bottomButtonTerms.text" = "使用条款";
+"firstOnboardingScreen.mainTitle" = "了解貓咪的反應";
+"firstOnboardingScreen.subTitle" = "觀察貓咪如何 \n 回應您的要求";
+"secondOnboardingScreen.mainTitle" = "請為應用評分！";
+"secondOnboardingScreen.subTitle" = "我們始終重視您的反饋 \n 以改進產品！";
+"thirtOnboardingScreen.mainTitle" = "判斷貓咪情緒";
+"thirtOnboardingScreen.subTitle" = "開始分析您的寵物 \n 當前的情緒狀態";
+"fourthOnboardingScreen.mainTitle" = "無限暢用 \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "免費試用3天，之後每週€9.49";
+"settingScreen.illustration.text" = "插圖由Ekaterina Rogova來自";
+"settingScreen.illustrationButton.text" = "哎喲！";
+"settingPrivacyButtons.text" = "隱私政策";
+"settingSpecialButtons.text" = "特別優惠";
+"settingTermsButtons.text" = "使用條款";
+"subscriptionPlans.text" = "超值訂閱方案！";
+"yearSubscription.text" = "熱門1年訂閱";
+"catSoundButton.text" = "貓咪聲音";
+"humanSoundButton.text" = "人類聲音";
+"chooseVoice.text" = "選擇要播放的聲音";
+"addCatButton.text" = "添加您的貓咪";
+"continueButton.text" = "繼續";
+

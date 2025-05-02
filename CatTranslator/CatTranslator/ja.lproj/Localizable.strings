@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "プライバシーポリシー";
+"bottomButtonRestore.text" = "復元する";
+"bottomButtonTerms.text" = "利用規約";
+"firstOnboardingScreen.mainTitle" = "猫の反応を知ろう";
+"firstOnboardingScreen.subTitle" = "猫がどのように \n あなたの要求に応えるか確認できます";
+"secondOnboardingScreen.mainTitle" = "アプリを評価してください！";
+"secondOnboardingScreen.subTitle" = "ユーザーのフィードバックを常に分析し \n 製品の改善に努めています！";
+"thirtOnboardingScreen.mainTitle" = "猫の機嫌を判断";
+"thirtOnboardingScreen.subTitle" = "ペットの現在の \n 機嫌を分析開始";
+"fourthOnboardingScreen.mainTitle" = "無制限アクセス \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "3日間無料、その後€9.49/週";
+"settingScreen.illustration.text" = "イラスト: Ekaterina Rogova（提供元:";
+"settingScreen.illustrationButton.text" = "痛っ！";
+"settingPrivacyButtons.text" = "プライバシーポリシー";
+"settingSpecialButtons.text" = "スペシャルオファー";
+"settingTermsButtons.text" = "利用規約";
+"subscriptionPlans.text" = "お得なサブスクリプンプラン！";
+"yearSubscription.text" = "人気の1年サブスクリプン";
+"catSoundButton.text" = "猫の鳴き声";
+"humanSoundButton.text" = "人間の声";
+"chooseVoice.text" = "再生する音声を選択";
+"addCatButton.text" = "猫を追加";
+"continueButton.text" = "続ける";

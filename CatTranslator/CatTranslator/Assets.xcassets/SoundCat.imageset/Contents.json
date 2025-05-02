@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "kitekat-cat-listening-to-music.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

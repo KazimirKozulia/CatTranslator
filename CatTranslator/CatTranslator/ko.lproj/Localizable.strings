@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "개인 정보 보호 정책";
+"bottomButtonRestore.text" = "복원하다";
+"bottomButtonTerms.text" = "이용약관";
+"firstOnboardingScreen.mainTitle" = "고양이 반응 알아보기";
+"firstOnboardingScreen.subTitle" = "고양이가 어떻게 \n 당신의 요청에 반응하는지 확인하세요";
+"secondOnboardingScreen.mainTitle" = "앱을 평가해주세요!";
+"secondOnboardingScreen.subTitle" = "우리는 항상 여러분의 피드백을 평가하여 \n 제품을 개선합니다!";
+"thirtOnboardingScreen.mainTitle" = "고양이 기분 파악하기";
+"thirtOnboardingScreen.subTitle" = "반려동물의 \n 기분 상태를 분석 시작";
+"fourthOnboardingScreen.mainTitle" = "Cat Translate Pro \n 무제한 이용";
+"fourthOnboardingScreen.freeButton" = "3일 무료 체험 후 주당 €9.49";
+"settingScreen.illustration.text" = "Ekaterina Rogova의 일러스트레이션";
+"settingScreen.illustrationButton.text" = "아야!";
+"settingPrivacyButtons.text" = "개인정보 보호정책";
+"settingSpecialButtons.text" = "특별 할인";
+"settingTermsButtons.text" = "이용 약관";
+"subscriptionPlans.text" = "혜택 가득한 구독 플랜!";
+"yearSubscription.text" = "인기 1년 구독";
+"catSoundButton.text" = "고양이 소리";
+"humanSoundButton.text" = "사람 목소리";
+"chooseVoice.text" = "재생할 음성 선택";
+"addCatButton.text" = "당신의 고양이 추가";
+"continueButton.text" = "계속하기";

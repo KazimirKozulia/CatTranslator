@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = " Политика конфиденциальности";
+"bottomButtonRestore.text" = "Восстановить";
+"bottomButtonTerms.text" = "Условия эксплуатации";
+"firstOnboardingScreen.mainTitle" = "Узнайте, как реагирует кошка";
+"firstOnboardingScreen.subTitle" = "Определите, как кошка отвечает \n на ваши запросы";
+"secondOnboardingScreen.mainTitle" = "Пожалуйста, оцените приложение!";
+"secondOnboardingScreen.subTitle" = "Мы всегда учитываем ваши отзывы, \n чтобы улучшить наш продукт!";
+"thirtOnboardingScreen.mainTitle" = "Определите настроение кошки";
+"thirtOnboardingScreen.subTitle" = "Начните определять, в каком \n настроении ваш питомец";
+"fourthOnboardingScreen.mainTitle" = "Безлимитный доступ к \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "3 дня бесплатно, затем €9.49/неделя";
+"settingScreen.illustration.text" = "Иллюстрации: Ekaterina Rogova из";
+"settingScreen.illustrationButton.text" = "Ouch!";
+"settingPrivacyButtons.text" = "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ";
+"settingSpecialButtons.text" = "СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ";
+"settingTermsButtons.text" = "УСЛОВИЯ ИСПОЛЬЗОВАНИЯ";
+"subscriptionPlans.text" = "Выгодные планы подписки!";
+"yearSubscription.text" = "Популярная годовая подписка";
+"catSoundButton.text" = "КОШАЧИЙ ЗВУК";
+"humanSoundButton.text" = "ЧЕЛОВЕЧЕСКИЙ ГОЛОС";
+"chooseVoice.text" = "Выберите, чей голос будет звучать";
+"addCatButton.text" = "ДОБАВИТЬ КОШКУ";
+"continueButton.text" = "ПРОДОЛЖИТЬ";
+
+

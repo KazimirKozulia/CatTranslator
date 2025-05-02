@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "Politica sulla riservatezza";
+"bottomButtonRestore.text" = "Ripristinare";
+"bottomButtonTerms.text" = "Termini di utilizzo";
+"firstOnboardingScreen.mainTitle" = "Scopri come reagisce il gatto";
+"firstOnboardingScreen.subTitle" = "Determina come il gatto risponde \n alle tue richieste";
+"secondOnboardingScreen.mainTitle" = "Valuta l'App!";
+"secondOnboardingScreen.subTitle" = "Valutiamo sempre il tuo feedback \n per migliorare il nostro prodotto!";
+"thirtOnboardingScreen.mainTitle" = "Determina l'umore del gatto";
+"thirtOnboardingScreen.subTitle" = "Inizia a determinare \n l'umore del tuo animale";
+"fourthOnboardingScreen.mainTitle" = "Accesso Illimitato a \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "3 giorni gratis, poi €9.49/settimana";
+"settingScreen.illustration.text" = "Illustrazioni di Ekaterina Rogova da";
+"settingScreen.illustrationButton.text" = "Ouch!";
+"settingPrivacyButtons.text" = "PRIVACY POLICY";
+"settingSpecialButtons.text" = "OFFERTA SPECIALE";
+"settingTermsButtons.text" = "TERMINI DI UTILIZZO";
+"subscriptionPlans.text" = "Piani di abbonamento vantaggiosi!";
+"yearSubscription.text" = "Abbonamento annuale popolare";
+"catSoundButton.text" = "VERSO DEL GATTO";
+"humanSoundButton.text" = "VOCE UMANA";
+"chooseVoice.text" = "Scegli quale voce ascoltare";
+"addCatButton.text" = "AGGIUNGI IL TUO GATTO";
+"continueButton.text" = "CONTINUA";

@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "سياسة الخصوصية";
+"bottomButtonRestore.text" = "يعيد";
+"bottomButtonTerms.text" = "شروط الاستخدام";
+"firstOnboardingScreen.mainTitle" = "اكتشف كيف تتفاعل القطة";
+"firstOnboardingScreen.subTitle" = "حدد كيف تستجيب القطة \n لطلباتك";
+"secondOnboardingScreen.mainTitle" = "من فضلك قيم التطبيق!";
+"secondOnboardingScreen.subTitle" = "نحن نقيم ملاحظاتك دائماً \n لتحسين منتجنا!";
+"thirtOnboardingScreen.mainTitle" = "حدد مزاج القطة";
+"thirtOnboardingScreen.subTitle" = "ابدأ في تحديد \n مزاج حيوانك الأليف";
+"fourthOnboardingScreen.mainTitle" = "وصول غير محدود إلى \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "3 أيام مجاناً، ثم €9.49/أسبوعياً";
+"settingScreen.illustration.text" = "رسومات من إيكاترينا روجوفا من";
+"settingScreen.illustrationButton.text" = "أوتش!";
+"settingPrivacyButtons.text" = "سياسة الخصوصية";
+"settingSpecialButtons.text" = "عرض خاص";
+"settingTermsButtons.text" = "شروط الاستخدام";
+"subscriptionPlans.text" = "خطط اشتراك مفيدة!";
+"yearSubscription.text" = "اشتراك سنوي شعبي";
+"catSoundButton.text" = "صوت القطة";
+"humanSoundButton.text" = "صوت الإنسان";
+"chooseVoice.text" = "اختر الصوت الذي تريد سماعه";
+"addCatButton.text" = "أضف قطتك";
+"continueButton.text" = "متابعة";
+

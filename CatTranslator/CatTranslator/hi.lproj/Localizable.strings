@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "गोपनीयता नीति ";
+"bottomButtonRestore.text" = "पुनर्स्थापित करना";
+"bottomButtonTerms.text" = "उपयोग की शर्तें";
+"firstOnboardingScreen.mainTitle" = "जानिए बिल्ली कैसे प्रतिक्रिया करती है";
+"firstOnboardingScreen.subTitle" = "पता लगाएं कि आपकी बिल्ली \n आपके अनुरोधों का जवाब कैसे देती है";
+"secondOnboardingScreen.mainTitle" = "कृपया ऐप को रेट करें!";
+"secondOnboardingScreen.subTitle" = "हम आपके फीडबैक का मूल्यांकन करते हैं \n अपने उत्पाद को बेहतर बनाने के लिए!";
+"thirtOnboardingScreen.mainTitle" = "बिल्ली के मूड का पता लगाएं";
+"thirtOnboardingScreen.subTitle" = "अपने पालतू जानवर के \n मूड को समझना शुरू करें";
+"fourthOnboardingScreen.mainTitle" = "Cat Translate Pro तक \n असीमित पहुंच";
+"fourthOnboardingScreen.freeButton" = "3 दिन मुफ्त, फिर €9.49/सप्ताह";
+"settingScreen.illustration.text" = "एकातेरिना रोगोवा द्वारा चित्रण";
+"settingScreen.illustrationButton.text" = "ओह!";
+"settingPrivacyButtons.text" = "गोपनीयता नीति";
+"settingSpecialButtons.text" = "विशेष ऑफर";
+"settingTermsButtons.text" = "उपयोग की शर्तें";
+"subscriptionPlans.text" = "फायदेमंद सब्सक्रिप्शन प्लान!";
+"yearSubscription.text" = "लोकप्रिय 1-वर्षीय सदस्यता";
+"catSoundButton.text" = "बिल्ली की आवाज";
+"humanSoundButton.text" = "मानव आवाज";
+"chooseVoice.text" = "चुनें कि किसकी आवाज सुनी जाएगी";
+"addCatButton.text" = "अपनी बिल्ली को जोड़ें";
+"continueButton.text" = "जारी रखें";
+

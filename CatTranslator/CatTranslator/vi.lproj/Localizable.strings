@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "Chính sách bảo mật";
+"bottomButtonRestore.text" = "Khôi phục";
+"bottomButtonTerms.text" = "Điều khoản sử dụng";
+"firstOnboardingScreen.mainTitle" = "Khám phá cách mèo phản ứng";
+"firstOnboardingScreen.subTitle" = "Xem cách mèo đáp lại \n yêu cầu của bạn";
+"secondOnboardingScreen.mainTitle" = "Đánh giá ứng dụng!";
+"secondOnboardingScreen.subTitle" = "Chúng tôi luôn đánh giá phản hồi \n để cải thiện sản phẩm!";
+"thirtOnboardingScreen.mainTitle" = "Xác định tâm trạng mèo";
+"thirtOnboardingScreen.subTitle" = "Bắt đầu nhận biết \n tâm trạng thú cưng của bạn";
+"fourthOnboardingScreen.mainTitle" = "Truy cập không giới hạn \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "Dùng thử 3 ngày miễn phí, sau đó €9.49/tuần";
+"settingScreen.illustration.text" = "Minh họa bởi Ekaterina Rogova từ";
+"settingScreen.illustrationButton.text" = "Ouch!";
+"settingPrivacyButtons.text" = "CHÍNH SÁCH BẢO MẬT";
+"settingSpecialButtons.text" = "ƯU ĐÃI ĐẶC BIỆT";
+"settingTermsButtons.text" = "ĐIỀU KHOẢN SỬ DỤNG";
+"subscriptionPlans.text" = "Gói thuê bao lợi ích!";
+"yearSubscription.text" = "Gói thuê bao 1 năm phổ biến";
+"catSoundButton.text" = "TIẾNG MÈO";
+"humanSoundButton.text" = "GIỌNG NGƯỜI";
+"chooseVoice.text" = "Chọn giọng sẽ phát";
+"addCatButton.text" = "THÊM MÈO CỦA BẠN";
+"continueButton.text" = "TIẾP TỤC";
+
+

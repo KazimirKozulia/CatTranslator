@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "นโยบายความเป็นส่วนตัว";
+"bottomButtonRestore.text" = "คืนค่า";
+"bottomButtonTerms.text" = "เงื่อนไขการใช้งาน";
+"firstOnboardingScreen.mainTitle" = "ค้นหาว่าแมวตอบสนองอย่างไร";
+"firstOnboardingScreen.subTitle" = "ดูว่าแมวตอบสนองต่อ \n คำขอของคุณอย่างไร";
+"secondOnboardingScreen.mainTitle" = "กรุณาประเมินแอป!";
+"secondOnboardingScreen.subTitle" = "เราประเมินความคิดเห็นของคุณเสมอ \n เพื่อปรับปรุงผลิตภัณฑ์ของเรา!";
+"thirtOnboardingScreen.mainTitle" = "ระบุอารมณ์ของแมว";
+"thirtOnboardingScreen.subTitle" = "เริ่มต้นระบุ \n อารมณ์ของสัตว์เลี้ยงของคุณ";
+"fourthOnboardingScreen.mainTitle" = "ใช้งานไม่จำกัดกับ \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "ใช้ฟรี 3 วัน จากนั้น €9.49/สัปดาห์";
+"settingScreen.illustration.text" = "ภาพประกอบโดย Ekaterina Rogova จาก";
+"settingScreen.illustrationButton.text" = "โอ๊ย!";
+"settingPrivacyButtons.text" = "นโยบายความเป็นส่วนตัว";
+"settingSpecialButtons.text" = "ข้อเสนอพิเศษ";
+"settingTermsButtons.text" = "เงื่อนไขการใช้งาน";
+"subscriptionPlans.text" = "แผนสมาชิกที่คุ้มค่า!";
+"yearSubscription.text" = "สมาชิกรายปียอดนิยม";
+"catSoundButton.text" = "เสียงแมว";
+"humanSoundButton.text" = "เสียงมนุษย์";
+"chooseVoice.text" = "เลือกว่าจะได้ยินเสียงอะไร";
+"addCatButton.text" = "เพิ่มแมวของคุณ";
+"continueButton.text" = "ดำเนินการต่อ";
+

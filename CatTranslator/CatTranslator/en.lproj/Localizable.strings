@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "Privacy policy";
+"bottomButtonRestore.text" = "Restore";
+"bottomButtonTerms.text" = "Terms of Use";
+"firstOnboardingScreen.mainTitle" = "Find out how the cat react";
+"firstOnboardingScreen.subTitle" = "Determine how cat responds \n to your requests";
+"secondOnboardingScreen.mainTitle" = "Please Rate the App!";
+"secondOnboardingScreen.subTitle" = "We always evaluate your feedback \n to make our product better!";
+"thirtOnboardingScreen.mainTitle" = "Determine the mood of the cat";
+"thirtOnboardingScreen.subTitle" = "Start to determine what mood \n your pet is in";
+"fourthOnboardingScreen.mainTitle" = "Unlimited Access to \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "3 days free then €9.49/week";
+"settingScreen.illustration.text" = "Illustration by Ekaterina Rogova from";
+"settingScreen.illustrationButton.text" = "Ouch!"
+"settingPrivacyButtons.text" = "PRIVACY POLICY";
+"settingSpecialButtons.text" = "SPECIAL OFFER";
+"settingTermsButtons.text" = "TERMS OF USE";
+"subscriptionPlans.text" = "Beneficial subscription plans!";
+"yearSubscription.text" = "Popular 1-year subscription";
+"catSoundButton.text" = "CAT SOUND";
+"humanSoundButton.text" = "HUMAN SOUND";
+"chooseVoice.text" = "Choose whose voice will be heard";
+"addCatButton.text" = "ADD YOUR CAT";
+"continueButton.text" = "CONTINUE";
+"limitedOfferScreen.mainTitle" = "Limited offer";
+"limitedOfferScreen.subTitle" = "Unlock all features";
+"limitedOfferScreen.getFullAccess" = "Get full access";
+"limitedOfferScreen.newPrice" = "Only $14,99";
+"limitedOfferScreen.oldPrice" = "Old prise $14,99";
+"limitedOfferScreen.endOffer" = "Until the end of the offer left";
+"addCatScreen.mainTitle" = "Add a cat";
+"addCatScreen.textField.catName" = "Cat name";
+"addCatScreen.textField.male" = "Male";
+"addCatScreen.textField.female" = "Female";
+"addCatScreen.textField.catsAge" = "Cat's age";
+"addCatScreen.textField.breed" = "Breed(optional)";
+"historyScreen.dontHaveTranslations" = "You don't have any translations";
+"menuMainButton.text" = "Main";
+"menuSoundButton.text" = "Sound";
+"menuHistoryButton.text" = "History";
+
+
+
+
+
+
+
+
+
+

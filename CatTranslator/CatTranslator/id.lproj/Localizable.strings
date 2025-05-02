@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  CatTranslator
+
+  Created by Kazimir Kozulia on 22.04.2025.
+  
+*/
+
+"bottomButtonPrivacy.text" = "Kebijakan Privasi";
+"bottomButtonRestore.text" = "Memulihkan";
+"bottomButtonTerms.text" = "Ketentuan Penggunaan";
+"firstOnboardingScreen.mainTitle" = "Cari tahu reaksi kucing";
+"firstOnboardingScreen.subTitle" = "Ketahui bagaimana kucing merespons \n permintaan Anda";
+"secondOnboardingScreen.mainTitle" = "Tolong Beri Nilai Aplikasi!";
+"secondOnboardingScreen.subTitle" = "Kami selalu mengevaluasi masukan Anda \n untuk meningkatkan produk kami!";
+"thirtOnboardingScreen.mainTitle" = "Tentukan suasana hati kucing";
+"thirtOnboardingScreen.subTitle" = "Mulailah mengenali \n suasana hati hewan peliharaan Anda";
+"fourthOnboardingScreen.mainTitle" = "Akses Tak Terbatas ke \n Cat Translate Pro";
+"fourthOnboardingScreen.freeButton" = "Gratis 3 hari, kemudian €9.49/minggu";
+"settingScreen.illustration.text" = "Ilustrasi oleh Ekaterina Rogova dari";
+"settingScreen.illustrationButton.text" = "Ouch!";
+"settingPrivacyButtons.text" = "KEBIJAKAN PRIVASI";
+"settingSpecialButtons.text" = "PENAWARAN KHUSUS";
+"settingTermsButtons.text" = "SYARAT PENGGUNAAN";
+"subscriptionPlans.text" = "Paket langganan menguntungkan!";
+"yearSubscription.text" = "Langganan 1 tahun populer";
+"catSoundButton.text" = "SUARA KUCING";
+"humanSoundButton.text" = "SUARA MANUSIA";
+"chooseVoice.text" = "Pilih suara yang ingin didengar";
+"addCatButton.text" = "TAMBAHKAN KUCING ANDA";
+"continueButton.text" = "LANJUTKAN";
