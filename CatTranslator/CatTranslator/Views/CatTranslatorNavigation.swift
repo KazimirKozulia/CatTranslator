@@ -21,7 +21,7 @@ struct CatTranslatorNavigation {
     
     @ObservableState
     struct State {
-//        @Shared(.isOnboardingPassed) var isOnboardingPassed = false
+        @Shared(.isOnboardingPassed) var isOnboardingPassed = false
         var path = StackState<Path.State>()
         var mainId: StackElementID?
     }
@@ -49,7 +49,7 @@ struct CatTranslatorNavigation {
                     state.path.append(.main(.init()))
                 }
                 return .none
-            case let .path(.element(id: id, action: .onboarding(.backButton(.buttonTapped)))):
+            case let .path(.element(id: id, action: .onboarding(.backCrossButton(.buttonTapped)))):
                 guard case  .onboarding = state.path[id: id] else {
                     return .none
                 }
@@ -59,23 +59,23 @@ struct CatTranslatorNavigation {
                     state.path.pop(to: mainId)
                 }
                 return .none
-            case let .path(.element(id: id, action: .main(.settingButton(.buttonTapped)))):
-                guard case  .main = state.path[id: id] else {
-                    return .none
-                }
-                state.path.append(.setting(.init()))
-                return .none
-            case let .path(.element(id: id, action: .setting(.backSettingButton(.buttonTapped)))):
-                guard case .setting = state.path[id: id] else {
-                    return .none
-                }
-                if let mainId = state.mainId{
-                    state.path.pop(to: mainId)
-                } else {
-                    state.path.append(.main(.init()))
-                    state.mainId = state.path.ids.last
-                }
-                return .none
+//            case let .path(.element(id: id, action: .main(.settingButton(.buttonTapped)))):
+//                guard case  .main = state.path[id: id] else {
+//                    return .none
+//                }
+//                state.path.append(.setting(.init()))
+//                return .none
+//            case let .path(.element(id: id, action: .setting(.backCrossButton(.buttonTapped)))):
+//                guard case .setting = state.path[id: id] else {
+//                    return  .none
+//                }
+//                if let mainId = state.mainId{
+//                    state.path.pop(to: mainId)
+//                } else {
+//                    state.path.append(.main(.init()))
+//                    state.mainId = state.path.ids.last
+//                }
+//                return .none
             case .path:
                 return .none
             case .buttonTapped:
@@ -110,9 +110,9 @@ struct CatTranslatorNavigationView: View {
             case let .main(store):
                 MainScreen(store: store)
                     .toolbar(.hidden)
-            case let .setting(store):
-                SettingScreen(store: store)
-                    .toolbar(.hidden)
+//            case let .setting(store):
+//                SettingScreen(store: store)
+//                    .toolbar(.hidden)
 //            case .payWall(store):
 //                GeneralPaywall(store:store)
 //                    .toolbar(.hidden)

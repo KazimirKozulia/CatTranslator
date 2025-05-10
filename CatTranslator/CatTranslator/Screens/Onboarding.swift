@@ -24,7 +24,7 @@ struct Onboarding {
         var restoreButtons = MainTextButton.State(buttonText: Localizable.BottomButtonRestore.text, textSize: 16, textColor: .black, underlineColor: .clear)
         var termsButtons = MainTextButton.State(buttonText: Localizable.BottomButtonTerms.text, textSize: 16, textColor: .black, underlineColor: .clear)
         var continueButton = MainButton.State(buttonText: Localizable.ContinueButton.text, width: 300)
-        var backCrossButton = BackCrossButton.State()
+        var backCrossButton = MainIconButton.State(buttonImage: .cross)
         
         var mainTitle: String {
             switch myType {
@@ -71,7 +71,7 @@ struct Onboarding {
         case restoreButtons(MainTextButton.Action)
         case termsButtons(MainTextButton.Action)
         case continueButton(MainButton.Action)
-        case backCrossButton(BackCrossButton.Action)
+        case backCrossButton(MainIconButton.Action)
     }
     
     var body: some ReducerOf<Onboarding> {
@@ -113,9 +113,9 @@ struct OnboardingScreens: View {
     var body: some View {
         VStack{
             HStack{
-                BackCrossButtonView(store: store.scope(state: \.backCrossButton, action: \.backCrossButton))
+                MainIconButtonView(store: store.scope(state: \.backCrossButton, action: \.backCrossButton))
                 Spacer()
-            }
+            }.padding(.horizontal, 30)
             
             Text(store.mainTitle)
                 .font(Fonts.Roboto.medium.swiftUIFont(size: 35))
@@ -132,6 +132,7 @@ struct OnboardingScreens: View {
             Spacer()
             
             MainButtonView(store: store.scope(state: \.continueButton, action: \.continueButton))
+                .buttonStyle(OrangeButton())
             
             Spacer()
             
@@ -152,23 +153,21 @@ struct OnboardingScreens: View {
                 Spacer()
                 
                 MainTextButtonView(store: store.scope(state: \.termsButtons, action: \.termsButtons))
-            }
+            } .padding(.horizontal)
         }
-        
-        .containerRelativeFrame([.horizontal, .vertical])
         .background(.mainBackground)
     }
 }
 
-//#Preview {
-//    OnboardingScreens(
-//        store: StoreOf<Onboarding>(
-//            initialState: Onboarding.State(myType: .second),
-//            reducer: { Onboarding() }
-//        )
-//    )
-//    
-//}
+#Preview {
+    OnboardingScreens(
+        store: StoreOf<Onboarding>(
+            initialState: Onboarding.State(myType: .second),
+            reducer: { Onboarding() }
+        )
+    )
+    
+}
 
 
 

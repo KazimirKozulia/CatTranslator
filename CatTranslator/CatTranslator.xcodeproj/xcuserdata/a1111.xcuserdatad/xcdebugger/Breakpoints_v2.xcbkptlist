@@ -3,4 +3,52 @@
    uuid = "93F5B703-5F28-468E-9169-0DE5517E8F30"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0590C401-883A-48D6-B554-E5C221E53D09"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CatTranslator/Screens/LimitedOfferScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "State"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "0590C401-883A-48D6-B554-E5C221E53D09 - 9769dedf21af6c3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CatTranslator.LimitedOffer.State.init() -&gt; CatTranslator.LimitedOffer.State"
+                  moduleName = "CatTranslator.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1111/Desktop/App/CatTranslator/CatTranslator/CatTranslator/Screens/LimitedOfferScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15">
+               </Location>
+               <Location
+                  uuid = "0590C401-883A-48D6-B554-E5C221E53D09 - bea2ab373edb48d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of CatTranslator.LimitedOffer.State.init(crossButton: CatTranslator.MainIconButton.State, continueButton: CatTranslator.MainButton.State, privacyButtons: CatTranslator.MainTextButton.State, restoreButtons: CatTranslator.MainTextButton.State, termsButtons: CatTranslator.MainTextButton.State, _$observationRegistrar: ComposableArchitecture.ObservationStateRegistrar) -&gt; CatTranslator.LimitedOffer.State"
+                  moduleName = "CatTranslator.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1111/Desktop/App/CatTranslator/CatTranslator/%3Cstdin%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

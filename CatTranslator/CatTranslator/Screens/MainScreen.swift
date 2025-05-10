@@ -36,3 +36,12 @@ struct MainScreen: View {
         Text("Hello, World!")
     }
 }
+
+#Preview {
+    MainScreen(
+        store: StoreOf<Main>(
+            initialState: Main.State(),
+            reducer: { Main() }
+        )
+    )
+}

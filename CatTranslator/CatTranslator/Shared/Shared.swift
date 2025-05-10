@@ -7,4 +7,8 @@
 import SwiftUI
 import ComposableArchitecture
 
-
+extension SharedKey where Self == AppStorageKey<Bool> {
+    static var isOnboardingPassed: Self {
+        appStorage("isOnboardingPassed")
+    }
+}

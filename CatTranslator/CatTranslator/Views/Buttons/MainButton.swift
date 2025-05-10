@@ -16,6 +16,7 @@ struct MainButton {
         var buttonText: String
         var width: CGFloat
         var buttonImage: ImageResource?
+        
     }
     
     enum Action {
@@ -32,60 +33,62 @@ struct MainButton {
     }
 }
 
+
 struct MainButtonView: View {
     let store: StoreOf<MainButton>
-
+    
     var body: some View {
-        
-        ZStack(alignment: .leading){
-            Button {
-                store.send(.buttonTapped)
-            } label: {
+        Button {
+            store.send(.buttonTapped)
+        } label: {
+            HStack{
+                if let imageResource = store.buttonImage {
+                    Image(imageResource)
+                } else {
+                    EmptyView()
+                }
+                
+                Spacer()
+                
                 Text(store.buttonText)
-                    .font(Fonts.Roboto.medium.swiftUIFont(size: 20))
-                    .frame(minWidth: 0, maxWidth: store.width)
-                    .padding()
-                    .background(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing))
-                    .foregroundStyle(Color.white)
-                    .cornerRadius(20)
-                    .shadow(color: .gray, radius: 5.0, x:0, y:5)
-            }
-            
-            if let imageResource = store.buttonImage {
-                Image(imageResource)
-                    .padding(.horizontal, 20)
-            } else {
-                EmptyView()
-            }
+                    .font(Fonts.Roboto.medium.swiftUIFont(size: 18))
+                    .multilineTextAlignment(.center)
+                    .padding(.vertical, 20)
+                Spacer()
+                
+            } .frame(width: store.width)
         }
     }
 }
 
-struct GenderButton: View {
-    let title: String
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(Fonts.Roboto.medium.swiftUIFont(size: 20))
-                .foregroundColor(isSelected ? .white : .text)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing))
-                .foregroundStyle(Color.white)
-                .cornerRadius(20)
-                .shadow(color: .gray, radius: 5.0, x:0, y:5)
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(isSelected ? AnyShapeStyle(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing)) : AnyShapeStyle(Color.clear))
-                        .stroke(Color.blue, lineWidth: 1)
+struct OrangeButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [.gradientLeft, .gradientRight]),
+                    startPoint: .leading,
+                    endPoint: .trailing
                 )
-        }
-        
-        .animation(.easeInOut(duration: 0.3), value: isSelected)
-        .buttonStyle(.plain)
+            )
+            .foregroundColor(.white)
+            .cornerRadius(30)
+            .shadow(color: .gray, radius: 5.0, x: 0, y: 5)
+    }
+}
+
+struct SettingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(.white)
+            .foregroundStyle(
+                LinearGradient(
+                    gradient: Gradient(colors: [.gradientLeft, .gradientRight]),
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+            )
+            .cornerRadius(30)
+            .shadow(color: .gray, radius: 5.0, x: 0, y: 5)
     }
 }

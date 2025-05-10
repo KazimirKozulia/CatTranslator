@@ -70,16 +70,6 @@ public enum Localizable {
     /// ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
     public static let text = Localizable.tr("Localizable", "settingPrivacyButtons.text", fallback: "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ")
   }
-  public enum SettingScreen {
-    public enum Illustration {
-      /// Иллюстрации: Ekaterina Rogova из
-      public static let text = Localizable.tr("Localizable", "settingScreen.illustration.text", fallback: "Иллюстрации: Ekaterina Rogova из")
-    }
-    public enum IllustrationButton {
-      /// Ouch!
-      public static let text = Localizable.tr("Localizable", "settingScreen.illustrationButton.text", fallback: "Ouch!")
-    }
-  }
   public enum SettingSpecialButtons {
     /// СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
     public static let text = Localizable.tr("Localizable", "settingSpecialButtons.text", fallback: "СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ")

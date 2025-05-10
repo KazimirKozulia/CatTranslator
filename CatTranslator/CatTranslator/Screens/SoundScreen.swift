@@ -54,8 +54,19 @@ struct SoundScreen: View {
             VStack(alignment: .leading) {
                     MainButtonView (store: store.scope(state: \.humanSoundButton, action: \.humanSoundButton ))
             
-                    MainButtonView (store: store.scope(state: \.catSoundButton, action: \.catSoundButton ))
-            }
+                MainButtonView (store: store.scope(state: \.catSoundButton, action: \.catSoundButton ))
+            }.buttonStyle(OrangeButton())
         }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(.mainBackground)
     }
+}
+
+#Preview {
+    SoundScreen(
+        store: StoreOf<Sound>(
+            initialState: Sound.State(),
+            reducer: { Sound() }
+        )
+    )
 }

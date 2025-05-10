@@ -12,15 +12,17 @@ import FirebaseCore
 @main
 struct CatTranslatorApp: App {
     var body: some Scene {
-                WindowGroup {
-                    SoundScreen(
-                        store: StoreOf<Sound>(
-                            initialState:
-                                Sound.State(),
-                            reducer: { Sound() }
-                        )
-                    )
-                }
+        WindowGroup {
+            SoundScreen(
+                store: StoreOf<Sound>(
+                    initialState:
+                        Sound.State(),
+                    reducer: { Sound() }
+                )
+            )
+        }
+    }
+}
 //        WindowGroup {
 //            OnboardingScreens(
 //                store: StoreOf<Onboarding>(
@@ -31,8 +33,8 @@ struct CatTranslatorApp: App {
 //                )
 //            )
 //        }
-    }
-}
+//    }
+//}
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,

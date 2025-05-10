@@ -12,7 +12,7 @@ struct LimitedOffer {
     
     @ObservableState
     struct State: Equatable {
-        var crossButton = BackCrossButton.State()
+        var crossButton = MainIconButton.State(buttonImage: .cross)
         var continueButton = MainButton.State(buttonText: Localizable.ContinueButton.text, width: 300)
         var privacyButtons = MainTextButton.State(buttonText: Localizable.BottomButtonPrivacy.text, textSize: 16, textColor: .black, underlineColor: .clear)
         var restoreButtons = MainTextButton.State(buttonText: Localizable.BottomButtonRestore.text, textSize: 16, textColor: .black, underlineColor: .clear)
@@ -20,7 +20,7 @@ struct LimitedOffer {
     }
     
     enum Action {
-        case crossButton(BackCrossButton.Action)
+        case crossButton(MainIconButton.Action)
         case continueButton(MainButton.Action)
         case privacyButtons(MainTextButton.Action)
         case restoreButtons(MainTextButton.Action)
@@ -51,8 +51,11 @@ struct LimitedOfferScreen: View {
     var body: some View {
         VStack {
             HStack{
-                BackCrossButtonView(store: store.scope(state: \.crossButton, action: \.crossButton))
-            }
+                MainIconButtonView(store: store.scope(state: \.crossButton, action: \.crossButton))
+                
+                Spacer()
+            } .padding(.horizontal, 30)
+            
             Text("Limited offer")
                 .font(Fonts.Roboto.medium.swiftUIFont(size: 32))
                 .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing))
@@ -67,7 +70,6 @@ struct LimitedOfferScreen: View {
             
             VStack{
                 Image(.offerCat)
-                    .resizable()
                 
                 Text("Get Full ACCESS")
                     .font(Fonts.Roboto.medium.swiftUIFont(size: 32))
@@ -90,6 +92,7 @@ struct LimitedOfferScreen: View {
             Text("Until the end of the offer left")
             
             MainButtonView(store: store.scope(state: \.continueButton, action: \.continueButton))
+                .buttonStyle(OrangeButton())
             
             HStack{
                 MainTextButtonView(store: store.scope(state: \.privacyButtons, action: \.privacyButtons))
@@ -101,9 +104,19 @@ struct LimitedOfferScreen: View {
                 Spacer()
                 
                 MainTextButtonView(store: store.scope(state: \.termsButtons, action: \.termsButtons))
-            }
+            } .padding()
         }
         .containerRelativeFrame([.horizontal, .vertical])
         .background(.mainBackground)
     }
 }
+
+#Preview {
+    LimitedOfferScreen(
+        store: StoreOf<LimitedOffer>(
+            initialState: LimitedOffer.State(),
+            reducer: { LimitedOffer() }
+        )
+    )
+}
+

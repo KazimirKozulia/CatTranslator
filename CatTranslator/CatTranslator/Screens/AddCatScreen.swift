@@ -13,36 +13,63 @@ struct AddCat {
     
     @ObservableState
     struct State: Equatable{
-        var backCrossButton = BackCrossButton.State()
-        var avatarButton = AddAvatarButton.State()
-        var saveButton = MainButton.State(buttonText: "Save", width: 170)
-        var selectedGender: String?
-//        var name:String = ""
+        var backCrossButton = MainIconButton.State(buttonImage: .cross)
+        var avatarButton = MainIconButton.State(buttonImage: .newAvatar)
+        var saveButton = MainButton.State(buttonText: "Save", width: 200)
+        var nameTextField = MainTextField.State(textFieldSubtitle: "Cat name")
+        var ageTextField = MainTextField.State(textFieldSubtitle: "Cat's age")
+        var breedTextField = MainTextField.State(textFieldSubtitle: "Breed(optional)")
+        var genderButtons: IdentifiedArrayOf<GenderButton.State> = []
     }
     
     enum Action {
-//        case binding(BindingAction<State>)
-        case backCrossButton(BackCrossButton.Action)
-        case avatarButton(AddAvatarButton.Action)
+        case nameTextField(MainTextField.Action)
+        case ageTextField(MainTextField.Action)
+        case breedTextField(MainTextField.Action)
+        case backCrossButton(MainIconButton.Action)
+        case avatarButton(MainIconButton.Action)
         case saveButton(MainButton.Action)
-        case genderSelected(String)
+        case genderButtons(IdentifiedActionOf<GenderButton>)
+        case onAppear
     }
+    
+    @Dependency(\.uuid) var uuid
     
     var body: some ReducerOf<AddCat> {
         Reduce { state, action in
             switch action {
+            case .nameTextField:
+                return .none
+            case .ageTextField:
+                return .none
+                
+            case .breedTextField:
+                return .none
+                
             case .backCrossButton:
                 return .none
+                
             case .avatarButton:
                 return .none
+                
             case .saveButton:
                 return .none
-            case .genderSelected(let gender):
-                state.selectedGender = (state.selectedGender == gender) ? nil : gender
+            case .genderButtons(.element(id: let id, action: .didTap)):
+                return .run { [buttons = state.genderButtons] send in
+                    for button in buttons {
+                        await send(.genderButtons(.element(id: button.id, action: .updateSelected(button.id == id))))
+                    }
+                }
+            case .genderButtons:
+                return .none
+                
+            case .onAppear:
+                state.genderButtons = IdentifiedArray(uniqueElements: GenderButton.Gender.allCases.map{
+                    GenderButton.State(id: UUID(), isSelected: $0 == .male, gender: $0)
+                })
                 return .none
             }
-        }
-   
+        }.forEach(\.genderButtons, action: \.genderButtons){ GenderButton() }
     }
 }
 
@@ -52,6 +79,7 @@ struct AddCatScreen: View {
     var body: some View {
         VStack{
             HStack{
+                Spacer()
                 
                 Text("Add a cat")
                     .font(Fonts.Roboto.medium.swiftUIFont(size: 22))
@@ -60,38 +88,49 @@ struct AddCatScreen: View {
                 
                 Spacer()
                 
-                BackCrossButtonView(store: store.scope(state: \.backCrossButton, action: \.backCrossButton))
+                MainIconButtonView(store: store.scope(state: \.backCrossButton, action: \.backCrossButton))
             } .padding(.horizontal, 20)
             
-            Spacer()
-            
-            AddAvatarButtonView(store: store.scope(state: \.avatarButton, action: \.avatarButton))
-            
-            Spacer()
-            
-            HStack(spacing: 16) {
-                GenderButton(
-                    title: "Male",
-                    isSelected: store.selectedGender == "Male",
-                    action: { store.send(.genderSelected("Male")) }
-                )
-                
-                GenderButton(
-                    title: "Female",
-                    isSelected: store.selectedGender == "Female",
-                    action: { store.send(.genderSelected("Female")) }
-                )
-            }
-            
             VStack{
-                // TextFields
-            }
+                MainIconButtonView(store: store.scope(state: \.avatarButton, action: \.avatarButton))
+                    .padding()
+                
+                MainTextFieldView(store: store.scope(state: \.nameTextField, action: \.nameTextField))
+                
+                
+                HStack(spacing: 16) {
+                    ForEach(store.scope(state: \.genderButtons, action: \.genderButtons)){
+                        GenderButtonView(store: $0)
+                    }
+                }
+                .padding()
+                
+                MainTextFieldView(store: store.scope(state: \.ageTextField, action: \.ageTextField))
+                
+                MainTextFieldView(store: store.scope(state: \.breedTextField, action: \.breedTextField))
+            }.padding(.horizontal, 20)
             
             Spacer()
             
             MainButtonView(store: store.scope(state: \.saveButton, action: \.saveButton))
+                .buttonStyle(OrangeButton())
             
             Spacer()
-        }
+        } .containerRelativeFrame([.horizontal, .vertical])
+            .background(.mainBackground)
+            .onAppear{
+                store.send(.onAppear)
+            }
     }
 }
+
+#Preview {
+    AddCatScreen(
+        store: StoreOf<AddCat>(
+            initialState: AddCat.State(),
+            reducer: { AddCat() }
+        )
+    )
+    
+}
+

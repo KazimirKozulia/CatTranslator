@@ -36,3 +36,12 @@ struct PaywallScreen: View {
         Text("Hello, World!")
     }
 }
+
+#Preview {
+    PaywallScreen(
+        store: StoreOf<Paywall>(
+            initialState: Paywall.State(),
+            reducer: { Paywall() }
+        )
+    )
+}

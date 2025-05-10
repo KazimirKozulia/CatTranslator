@@ -1,26 +1,26 @@
 //
-//  BackCrossButton.swift
+//  MainIconButton.swift
 //  CatTranslator
 //
-//  Created by Kazimir Kozulia on 22.04.2025.
+//  Created by Kazimir Kozulia on 02.05.2025.
 //
 
 import SwiftUI
 import ComposableArchitecture
 
 @Reducer
-struct BackCrossButton {
+struct MainIconButton {
     
     @ObservableState
     struct State: Equatable {
-        
+        var buttonImage: ImageResource
     }
     
     enum Action {
         case buttonTapped
     }
     
-    var body: some ReducerOf<BackCrossButton> {
+    var body: some ReducerOf<MainIconButton> {
         Reduce { state, action in
             switch action {
             case .buttonTapped:
@@ -30,13 +30,13 @@ struct BackCrossButton {
     }
 }
 
-struct BackCrossButtonView: View {
-    let store: StoreOf<BackCrossButton>
+struct MainIconButtonView: View {
+    let store: StoreOf<MainIconButton>
     var body: some View {
         Button {
             store.send(.buttonTapped)
         } label: {
-            Image(.cross)
+            Image(store.buttonImage)
         }
     }
 }

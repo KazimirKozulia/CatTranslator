@@ -36,3 +36,13 @@ struct HistoryScreen: View {
         Text("Hello, World!")
     }
 }
+
+#Preview {
+    HistoryScreen(
+        store: StoreOf<History>(
+            initialState: History.State(),
+            reducer: { History() }
+        )
+    )
+    
+}

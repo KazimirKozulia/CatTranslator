@@ -12,16 +12,16 @@ import ComposableArchitecture
 struct Setting {
     
     struct State: Equatable {
-        var ouchButton = MainTextButton.State(buttonText: Localizable.SettingScreen.IllustrationButton.text, textSize: 16, textColor: .gradientLeft, underlineColor: .gradientLeft)
+        var crossButton = MainIconButton.State(buttonImage: .cross)
         var payButton = MainTextButton.State(buttonText: "$1.99", textSize: 12, textColor: .gradientLeft, underlineColor: .clear)
         var addCatButton = MainButton.State(buttonText: Localizable.AddCatButton.text, width: .infinity)
-        var speciaButton = MainButton.State(buttonText: Localizable.SettingSpecialButtons.text, width: 24)
-        var termsButton = MainButton.State(buttonText: Localizable.SettingTermsButtons.text, width: 24)
-        var privacyButton = MainButton.State(buttonText: Localizable.SettingPrivacyButtons.text, width: 24)
+        var speciaButton = MainButton.State(buttonText: Localizable.SettingSpecialButtons.text, width: .infinity)
+        var termsButton = MainButton.State(buttonText: Localizable.SettingTermsButtons.text, width: .infinity)
+        var privacyButton = MainButton.State(buttonText: Localizable.SettingPrivacyButtons.text, width: .infinity)
     }
     
     enum Action {
-        case ouchButton(MainTextButton.Action)
+        case crossButton(MainIconButton.Action)
         case payButton(MainTextButton.Action)
         case addCatButton(MainButton.Action)
         case speciaButton(MainButton.Action)
@@ -43,7 +43,7 @@ struct Setting {
                 return .none
             case .payButton:
                 return .none
-            case .ouchButton:
+            case .crossButton:
                 return .none
             }
             
@@ -54,74 +54,105 @@ struct Setting {
 struct SettingScreen: View {
     let store: StoreOf<Setting>
     var body: some View {
+        
         VStack {
+            HStack{
+                Spacer()
+
+                MainIconButtonView(store: store.scope(state: \.crossButton, action: \.crossButton))
+                
+            } .padding(.horizontal, 30)
+            
             ZStack{
-                Canvas {_,_ in}
+                Canvas { _, _ in }
                     .frame(width: .infinity, height: 110)
-                    .border(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing))
-                    .background(LinearGradient(gradient: Gradient(colors: [.mainBackground, .gradientLeft]), startPoint: .top, endPoint: .bottom))
-                    .cornerRadius(20)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [.mainBackground, .gradientLeft]),
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [.gradientLeft, .gradientRight]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                ),
+                                lineWidth: 2
+                            )
+                    )
                     .padding()
-                HStack {
-                    VStack{
+                    .padding(.bottom, 30)
+                
+                HStack{
+                    VStack(alignment: .leading){
                         Text(Localizable.SubscriptionPlans.text)
                             .foregroundStyle(.gradientLeft)
-                            .padding(.leading, 30)
                             .font(Fonts.Roboto.light.swiftUIFont(size: 15))
-                    }
-                    HStack(alignment: .firstTextBaseline){
-                        Group {
-                            Text( Localizable.SubscriptionPlans.text)
-                            Text("only")
-                        }
-                        .foregroundStyle(.black)
-                        .padding(.leading, 30)
-                        .font(Fonts.Roboto.light.swiftUIFont(size: 15))
                         
-                        MainTextButtonView(store: store.scope(state: \.payButton, action: \.payButton))
-                        
-                        Text("per month")
+                        Text(Localizable.SubscriptionPlans.text)
                             .foregroundStyle(.black)
-                            .padding(.leading, 30)
                             .font(Fonts.Roboto.light.swiftUIFont(size: 15))
-                    }
-                }
+                        
+                        HStack{
+                            
+                            Text("Only")
+                                .foregroundStyle(.black)
+                                .font(Fonts.Roboto.light.swiftUIFont(size: 15))
+                            
+                            MainTextButtonView(store: store.scope(state: \.payButton, action: \.payButton))
+                            
+                            Text("per month")
+                                .foregroundStyle(.black)
+                                .font(Fonts.Roboto.light.swiftUIFont(size: 15))
+                        }
+                    } .padding(.bottom, 30)
+                    
+                    
+                    Spacer()
+                    Image(.coolCat)
+                        .padding(.trailing, 30)
+                }.padding(.leading, 30)
+
                 
-                Spacer()
-                
-                Image(.coolCat)
-                    .resizable()
-                    .padding(.trailing, 20)
                 //                        .frame(width: 170, height: 150)
             }
             
             Spacer()
             
             MainButtonView (store: store.scope(state: \.addCatButton, action: \.addCatButton ))
+                .buttonStyle(OrangeButton())
                 .padding(.horizontal, 20)
             
             Spacer()
             
             VStack {
                 MainButtonView (store: store.scope(state: \.speciaButton, action: \.speciaButton ))
-                
-                Spacer()
+                    .padding()
                 
                 MainButtonView (store: store.scope(state: \.termsButton, action: \.termsButton ))
-                
-                Spacer()
-                
+                    .padding()
                 
                 MainButtonView (store: store.scope(state: \.privacyButton, action: \.privacyButton ))
+                    .padding()
+
             }
+            .buttonStyle(SettingButton())
             
-            HStack{
-                Text(Localizable.SettingScreen.Illustration.text)
-                    .foregroundStyle(.gradientLeft)
-                    .font(Fonts.Roboto.light.swiftUIFont(size: 15))
-                MainTextButtonView(store: store.scope(state: \.ouchButton, action: \.ouchButton))
-            }
         }
+        .background(.mainBackground)
     }
 }
 
+#Preview {
+    SettingScreen(
+        store: StoreOf<Setting>(
+            initialState: Setting.State(),
+            reducer: { Setting() }
+        )
+    )
+}
