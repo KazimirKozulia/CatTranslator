@@ -35,14 +35,33 @@
 "limitedOfferScreen.endOffer" = "Until the end of the offer left";
 "addCatScreen.mainTitle" = "Add a cat";
 "addCatScreen.textField.catName" = "Cat name";
-"addCatScreen.textField.male" = "Male";
-"addCatScreen.textField.female" = "Female";
+"genderButtons.femaleText" = "Female";
+"genderButtons.maleText" = "Male";
 "addCatScreen.textField.catsAge" = "Cat's age";
 "addCatScreen.textField.breed" = "Breed(optional)";
 "historyScreen.dontHaveTranslations" = "You don't have any translations";
+"historyScreen.catButton.tetx" = "CAT";
+"historyScreen.humanButton.text" = "HUMAN";
 "menuMainButton.text" = "Main";
 "menuSoundButton.text" = "Sound";
 "menuHistoryButton.text" = "History";
+"saveButton.text" = "Save";
+"chooseAvatarView.title" = "Choose an avatar";
+"settingScreen.canvasFirstText" = "Popular 1-year subscription";
+"settingScreen.canvasSecondText" = "Only";
+"settingScreen.canvasThirdText" = "per month";
+"soundTarlationScreen.title" = "Translation completed!";
+"recordButton.text" = "Re-record";
+"saveTranslationButton.text" = "Save translation";
+"catTranslatorProScreen.mainTitle" = "Unlimited access to cat translator pro";
+"catTranslatorProScreen.priceTitle" = "$29,99/year cancel at any time";
+"catTranslatorProScreen.proVersionTitle" = "Why you need a pro version";
+"chooseCat.text" = "Choose your cat";
+"soundScreen.title" = "Audio recording in progress";
+"stopRecordingButton.text" = "Stop Recording";
+"soundAnalyzing.text" = "Analyzing";
+
+
 
 
 

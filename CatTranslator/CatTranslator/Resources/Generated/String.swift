@@ -14,6 +14,18 @@ public enum Localizable {
     /// ДОБАВИТЬ КОШКУ
     public static let text = Localizable.tr("Localizable", "addCatButton.text", fallback: "ДОБАВИТЬ КОШКУ")
   }
+  public enum AddCatScreen {
+    /// Добавить кошку
+    public static let mainTitle = Localizable.tr("Localizable", "addCatScreen.mainTitle", fallback: "Добавить кошку")
+    public enum TextField {
+      /// Порода (необязательно)
+      public static let breed = Localizable.tr("Localizable", "addCatScreen.textField.breed", fallback: "Порода (необязательно)")
+      /// Имя кошки
+      public static let catName = Localizable.tr("Localizable", "addCatScreen.textField.catName", fallback: "Имя кошки")
+      /// Возраст кошки
+      public static let catsAge = Localizable.tr("Localizable", "addCatScreen.textField.catsAge", fallback: "Возраст кошки")
+    }
+  }
   public enum BottomButtonPrivacy {
     /// Localizable.strings
     ///   CatTranslator
@@ -32,6 +44,22 @@ public enum Localizable {
   public enum CatSoundButton {
     /// КОШАЧИЙ ЗВУК
     public static let text = Localizable.tr("Localizable", "catSoundButton.text", fallback: "КОШАЧИЙ ЗВУК")
+  }
+  public enum CatTranslatorProScreen {
+    /// Неограниченный доступ к переводчику кошек Pro
+    public static let mainTitle = Localizable.tr("Localizable", "catTranslatorProScreen.mainTitle", fallback: "Неограниченный доступ к переводчику кошек Pro")
+    /// $29,99/год, отмена в любое время
+    public static let priceTitle = Localizable.tr("Localizable", "catTranslatorProScreen.priceTitle", fallback: "$29,99/год, отмена в любое время")
+    /// Зачем вам нужна Pro версия
+    public static let proVersionTitle = Localizable.tr("Localizable", "catTranslatorProScreen.proVersionTitle", fallback: "Зачем вам нужна Pro версия")
+  }
+  public enum ChooseAvatarView {
+    /// Выберите аватар
+    public static let title = Localizable.tr("Localizable", "chooseAvatarView.title", fallback: "Выберите аватар")
+  }
+  public enum ChooseCat {
+    /// Выберите свою кошку
+    public static let text = Localizable.tr("Localizable", "chooseCat.text", fallback: "Выберите свою кошку")
   }
   public enum ChooseVoice {
     /// Выберите, чей голос будет звучать
@@ -55,9 +83,65 @@ public enum Localizable {
     ///  Cat Translate Pro
     public static let mainTitle = Localizable.tr("Localizable", "fourthOnboardingScreen.mainTitle", fallback: "Безлимитный доступ к \n Cat Translate Pro")
   }
+  public enum GenderButtons {
+    /// Самка
+    public static let femaleText = Localizable.tr("Localizable", "genderButtons.femaleText", fallback: "Самка")
+    /// Самец
+    public static let maleText = Localizable.tr("Localizable", "genderButtons.maleText", fallback: "Самец")
+  }
+  public enum HistoryScreen {
+    /// У вас нет переводов
+    public static let dontHaveTranslations = Localizable.tr("Localizable", "historyScreen.dontHaveTranslations", fallback: "У вас нет переводов")
+    public enum CatButton {
+      /// КОШКА
+      public static let tetx = Localizable.tr("Localizable", "historyScreen.catButton.tetx", fallback: "КОШКА")
+    }
+    public enum HumanButton {
+      /// ЧЕЛОВЕК
+      public static let text = Localizable.tr("Localizable", "historyScreen.humanButton.text", fallback: "ЧЕЛОВЕК")
+    }
+  }
   public enum HumanSoundButton {
     /// ЧЕЛОВЕЧЕСКИЙ ГОЛОС
     public static let text = Localizable.tr("Localizable", "humanSoundButton.text", fallback: "ЧЕЛОВЕЧЕСКИЙ ГОЛОС")
+  }
+  public enum LimitedOfferScreen {
+    /// До конца предложения осталось
+    public static let endOffer = Localizable.tr("Localizable", "limitedOfferScreen.endOffer", fallback: "До конца предложения осталось")
+    /// Получить полный доступ
+    public static let getFullAccess = Localizable.tr("Localizable", "limitedOfferScreen.getFullAccess", fallback: "Получить полный доступ")
+    /// Ограниченное предложение
+    public static let mainTitle = Localizable.tr("Localizable", "limitedOfferScreen.mainTitle", fallback: "Ограниченное предложение")
+    /// Всего $14,99
+    public static let newPrice = Localizable.tr("Localizable", "limitedOfferScreen.newPrice", fallback: "Всего $14,99")
+    /// Старая цена $14,99
+    public static let oldPrice = Localizable.tr("Localizable", "limitedOfferScreen.oldPrice", fallback: "Старая цена $14,99")
+    /// Разблокируйте все функции
+    public static let subTitle = Localizable.tr("Localizable", "limitedOfferScreen.subTitle", fallback: "Разблокируйте все функции")
+  }
+  public enum MenuHistoryButton {
+    /// История
+    public static let text = Localizable.tr("Localizable", "menuHistoryButton.text", fallback: "История")
+  }
+  public enum MenuMainButton {
+    /// Главная
+    public static let text = Localizable.tr("Localizable", "menuMainButton.text", fallback: "Главная")
+  }
+  public enum MenuSoundButton {
+    /// Звук
+    public static let text = Localizable.tr("Localizable", "menuSoundButton.text", fallback: "Звук")
+  }
+  public enum RecordButton {
+    /// Перезаписать
+    public static let text = Localizable.tr("Localizable", "recordButton.text", fallback: "Перезаписать")
+  }
+  public enum SaveButton {
+    /// Сохранить
+    public static let text = Localizable.tr("Localizable", "saveButton.text", fallback: "Сохранить")
+  }
+  public enum SaveTranslationButton {
+    /// Сохранить перевод
+    public static let text = Localizable.tr("Localizable", "saveTranslationButton.text", fallback: "Сохранить перевод")
   }
   public enum SecondOnboardingScreen {
     /// Пожалуйста, оцените приложение!
@@ -70,6 +154,14 @@ public enum Localizable {
     /// ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
     public static let text = Localizable.tr("Localizable", "settingPrivacyButtons.text", fallback: "ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ")
   }
+  public enum SettingScreen {
+    /// Популярная годовая подписка
+    public static let canvasFirstText = Localizable.tr("Localizable", "settingScreen.canvasFirstText", fallback: "Популярная годовая подписка")
+    /// Всего
+    public static let canvasSecondText = Localizable.tr("Localizable", "settingScreen.canvasSecondText", fallback: "Всего")
+    /// в месяц
+    public static let canvasThirdText = Localizable.tr("Localizable", "settingScreen.canvasThirdText", fallback: "в месяц")
+  }
   public enum SettingSpecialButtons {
     /// СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
     public static let text = Localizable.tr("Localizable", "settingSpecialButtons.text", fallback: "СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ")
@@ -77,6 +169,22 @@ public enum Localizable {
   public enum SettingTermsButtons {
     /// УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
     public static let text = Localizable.tr("Localizable", "settingTermsButtons.text", fallback: "УСЛОВИЯ ИСПОЛЬЗОВАНИЯ")
+  }
+  public enum SoundAnalyzing {
+    /// Анализ
+    public static let text = Localizable.tr("Localizable", "soundAnalyzing.text", fallback: "Анализ")
+  }
+  public enum SoundScreen {
+    /// Идёт запись звука
+    public static let title = Localizable.tr("Localizable", "soundScreen.title", fallback: "Идёт запись звука")
+  }
+  public enum SoundTarlationScreen {
+    /// Перевод завершён!
+    public static let title = Localizable.tr("Localizable", "soundTarlationScreen.title", fallback: "Перевод завершён!")
+  }
+  public enum StopRecordingButton {
+    /// Остановить запись
+    public static let text = Localizable.tr("Localizable", "stopRecordingButton.text", fallback: "Остановить запись")
   }
   public enum SubscriptionPlans {
     /// Выгодные планы подписки!

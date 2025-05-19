@@ -11,7 +11,7 @@ import ComposableArchitecture
 @Reducer
 struct GenderButton {
     
-    enum Gender: String, Equatable, CaseIterable {
+    enum Gender: Equatable, CaseIterable {
         case male, female
     }
     
@@ -23,9 +23,9 @@ struct GenderButton {
         var title: String {
             switch gender {
             case .female:
-                "Female"
+                Localizable.GenderButtons.femaleText
             case .male:
-                "Male"
+                Localizable.GenderButtons.maleText
             }
         }
     }

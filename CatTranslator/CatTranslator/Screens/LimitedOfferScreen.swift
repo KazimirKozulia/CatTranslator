@@ -17,6 +17,14 @@ struct LimitedOffer {
         var privacyButtons = MainTextButton.State(buttonText: Localizable.BottomButtonPrivacy.text, textSize: 16, textColor: .black, underlineColor: .clear)
         var restoreButtons = MainTextButton.State(buttonText: Localizable.BottomButtonRestore.text, textSize: 16, textColor: .black, underlineColor: .clear)
         var termsButtons = MainTextButton.State(buttonText: Localizable.BottomButtonTerms.text, textSize: 16, textColor: .black, underlineColor: .clear)
+        
+        @Shared(.offerExpireDate) var offerExpireDateInterval = Date().timeIntervalSinceReferenceDate + 1500
+        
+        var offerExpireDate: Date {
+            .init(timeIntervalSinceReferenceDate: offerExpireDateInterval)
+        }
+        
+        var offerExpireDateString = "00:00:00"
     }
     
     enum Action {
@@ -25,11 +33,41 @@ struct LimitedOffer {
         case privacyButtons(MainTextButton.Action)
         case restoreButtons(MainTextButton.Action)
         case termsButtons(MainTextButton.Action)
+        case onAppear
+        case tick
     }
+    
+    enum CancelID { case stopClock }
+    
+    @Dependency(\.continuousClock) var continuousClock
     
     var body: some ReducerOf<LimitedOffer> {
         Reduce { state, action in
             switch action {
+            case .onAppear:
+                return .merge(
+                    .send(.tick),
+                    .cancel(id: CancelID.stopClock),
+                    .run { send in
+                        for await _ in self.continuousClock.timer(interval: .seconds(1)) {
+                            await send(.tick)
+                        }
+                    })
+                
+            case .tick:
+                let currentDate = Date()
+                if state.offerExpireDate > currentDate {
+                    let components = Calendar.current.dateComponents([.hour, .minute, .second], from: currentDate, to: state.offerExpireDate)
+                    guard let hours = components.hour,
+                          let minutes = components.minute,
+                          let seconds = components.second else { return .none}
+                    state.offerExpireDateString = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+                } else {
+                    state.$offerExpireDateInterval.withLock{_ in
+                        Date().timeIntervalSinceReferenceDate + 1500
+                    }
+                }
+                return .none
             case .crossButton:
                 return .none
             case .continueButton:
@@ -56,12 +94,12 @@ struct LimitedOfferScreen: View {
                 Spacer()
             } .padding(.horizontal, 30)
             
-            Text("Limited offer")
+            Text(Localizable.LimitedOfferScreen.mainTitle)
                 .font(Fonts.Roboto.medium.swiftUIFont(size: 32))
                 .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing))
                 .multilineTextAlignment(.center)
-
-            Text("Unlock all features")
+            
+            Text(Localizable.LimitedOfferScreen.subTitle)
                 .font(Fonts.Roboto.medium.swiftUIFont(size: 32))
                 .foregroundStyle(Color.gradientLeft)
                 .multilineTextAlignment(.center)
@@ -71,17 +109,17 @@ struct LimitedOfferScreen: View {
             VStack{
                 Image(.offerCat)
                 
-                Text("Get Full ACCESS")
+                Text(Localizable.LimitedOfferScreen.getFullAccess)
                     .font(Fonts.Roboto.medium.swiftUIFont(size: 32))
                     .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.gradientLeft, .gradientRight]), startPoint: .leading, endPoint: .trailing))
                     .multilineTextAlignment(.center)
                 
-                Text("Only $14,99")
+                Text(Localizable.LimitedOfferScreen.newPrice)
                     .font(Fonts.Roboto.medium.swiftUIFont(size: 24))
                     .foregroundStyle(Color.gradientLeft)
                     .multilineTextAlignment(.center)
                 
-                Text("Old prise $14,99")
+                Text(Localizable.LimitedOfferScreen.oldPrice)
                     .font(Fonts.Roboto.lightItalic.swiftUIFont(size: 18))
                     .foregroundStyle(Color.gradientLeft)
                     .multilineTextAlignment(.center)
@@ -89,7 +127,7 @@ struct LimitedOfferScreen: View {
             
             Spacer()
             
-            Text("Until the end of the offer left")
+            Text(Localizable.LimitedOfferScreen.endOffer)
             
             MainButtonView(store: store.scope(state: \.continueButton, action: \.continueButton))
                 .buttonStyle(OrangeButton())

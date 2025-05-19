@@ -15,10 +15,10 @@ struct AddCat {
     struct State: Equatable{
         var backCrossButton = MainIconButton.State(buttonImage: .cross)
         var avatarButton = MainIconButton.State(buttonImage: .newAvatar)
-        var saveButton = MainButton.State(buttonText: "Save", width: 200)
-        var nameTextField = MainTextField.State(textFieldSubtitle: "Cat name")
-        var ageTextField = MainTextField.State(textFieldSubtitle: "Cat's age")
-        var breedTextField = MainTextField.State(textFieldSubtitle: "Breed(optional)")
+        var saveButton = MainButton.State(buttonText: Localizable.SaveButton.text, width: 200)
+        var nameTextField = MainTextField.State(textFieldSubtitle: Localizable.AddCatScreen.TextField.catName)
+        var ageTextField = MainTextField.State(textFieldSubtitle: Localizable.AddCatScreen.TextField.catsAge)
+        var breedTextField = MainTextField.State(textFieldSubtitle: Localizable.AddCatScreen.TextField.breed)
         var genderButtons: IdentifiedArrayOf<GenderButton.State> = []
     }
     
@@ -81,7 +81,7 @@ struct AddCatScreen: View {
             HStack{
                 Spacer()
                 
-                Text("Add a cat")
+                Text(Localizable.AddCatScreen.mainTitle)
                     .font(Fonts.Roboto.medium.swiftUIFont(size: 22))
                     .foregroundStyle(.gradientLeft)
                     .multilineTextAlignment(.center)

@@ -34,11 +34,11 @@
                   endingLineNumber = "15">
                </Location>
                <Location
-                  uuid = "0590C401-883A-48D6-B554-E5C221E53D09 - bea2ab373edb48d8"
+                  uuid = "0590C401-883A-48D6-B554-E5C221E53D09 - ab31af0410e2ceb1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "default argument 0 of CatTranslator.LimitedOffer.State.init(crossButton: CatTranslator.MainIconButton.State, continueButton: CatTranslator.MainButton.State, privacyButtons: CatTranslator.MainTextButton.State, restoreButtons: CatTranslator.MainTextButton.State, termsButtons: CatTranslator.MainTextButton.State, _$observationRegistrar: ComposableArchitecture.ObservationStateRegistrar) -&gt; CatTranslator.LimitedOffer.State"
+                  symbolName = "default argument 0 of CatTranslator.LimitedOffer.State.init(crossButton: CatTranslator.MainIconButton.State, continueButton: CatTranslator.MainButton.State, privacyButtons: CatTranslator.MainTextButton.State, restoreButtons: CatTranslator.MainTextButton.State, termsButtons: CatTranslator.MainTextButton.State, offerExpireDateInterval: @autoclosure () -&gt; Swift.Double, offerExpireDateString: Swift.String, _$observationRegistrar: ComposableArchitecture.ObservationStateRegistrar) -&gt; CatTranslator.LimitedOffer.State"
                   moduleName = "CatTranslator.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a1111/Desktop/App/CatTranslator/CatTranslator/%3Cstdin%3E"

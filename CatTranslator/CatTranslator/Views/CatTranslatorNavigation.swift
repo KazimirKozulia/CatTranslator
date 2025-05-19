@@ -53,6 +53,7 @@ struct CatTranslatorNavigation {
                 guard case  .onboarding = state.path[id: id] else {
                     return .none
                 }
+                
                 state.path.append(.main(.init()))
                 state.mainId = state.path.ids.last
                 if let mainId = state.mainId {

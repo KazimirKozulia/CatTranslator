@@ -12,3 +12,9 @@ extension SharedKey where Self == AppStorageKey<Bool> {
         appStorage("isOnboardingPassed")
     }
 }
+
+extension SharedKey where Self == AppStorageKey<Double> {
+    static var offerExpireDate: Self {
+        appStorage("offerExpireDate")
+    }
+}

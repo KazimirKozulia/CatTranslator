@@ -94,19 +94,19 @@ struct SettingScreen: View {
                             .foregroundStyle(.gradientLeft)
                             .font(Fonts.Roboto.light.swiftUIFont(size: 15))
                         
-                        Text(Localizable.SubscriptionPlans.text)
+                        Text(Localizable.SettingScreen.canvasFirstText)
                             .foregroundStyle(.black)
                             .font(Fonts.Roboto.light.swiftUIFont(size: 15))
                         
                         HStack{
                             
-                            Text("Only")
+                            Text(Localizable.SettingScreen.canvasSecondText)
                                 .foregroundStyle(.black)
                                 .font(Fonts.Roboto.light.swiftUIFont(size: 15))
                             
                             MainTextButtonView(store: store.scope(state: \.payButton, action: \.payButton))
                             
-                            Text("per month")
+                            Text(Localizable.SettingScreen.canvasThirdText)
                                 .foregroundStyle(.black)
                                 .font(Fonts.Roboto.light.swiftUIFont(size: 15))
                         }
