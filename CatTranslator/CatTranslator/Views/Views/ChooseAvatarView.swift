@@ -29,23 +29,13 @@ struct ChooseAvatar {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                let avatars = [
-                    ("Cat 1"),
-                    ("Cat 2"),
-                    ("Cat 3"),
-                    ("Cat 4"),
-                    ("Cat 5"),
-                    ("Cat 6"),
-                    ("Cat 7"),
-                    ("Cat 8"),
-                    ("Cat 9"),
-                    ("Cat 10"),
-                    ("Cat 11"),
-                    ("Cat 12")
-                ]
-                state.avatars = IdentifiedArray(uniqueElements: avatars.map{
-                    Sticker.State(id: UUID(), imageName: "\($0)")
-                })
+                state.avatars = IdentifiedArray(
+                    uniqueElements: (1...12).map {
+                        "Cat \($0)"
+                    }.map {
+                        Sticker.State(id: UUID(), imageName: $0)
+                    }
+                )
                 return .none
             case .avatars(.element(id: UUID(), action: .didTap)):
                 return .none
@@ -68,7 +58,7 @@ struct ChooseAvatarView: View {
         VStack {
             HStack{
                 Spacer()
-
+                
                 Text(Localizable.ChooseAvatarView.title)
                     .font(Fonts.Roboto.medium.swiftUIFont(size: 18))
                     .foregroundStyle(.gradientLeft)

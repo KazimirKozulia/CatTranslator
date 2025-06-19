@@ -25,29 +25,13 @@ struct Main {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                let stickers = [
-                    ("Sticker1"),
-                    ("Sticker2"),
-                    ("Sticker3"),
-                    ("Sticker4"),
-                    ("Sticker5"),
-                    ("Sticker6"),
-                    ("Sticker7"),
-                    ("Sticker8"),
-                    ("Sticker9"),
-                    ("Sticker10"),
-                    ("Sticker11"),
-                    ("Sticker12"),
-                    ("Sticker13"),
-                    ("Sticker14"),
-                    ("Sticker15"),
-                    ("Sticker16"),
-                    ("Sticker17"),
-                    ("Sticker18")
-                ]
-                state.stickers = IdentifiedArray(uniqueElements: stickers.map{
-                    Sticker.State(id: UUID(), imageName: "\($0)")
-                })
+                state.stickers = IdentifiedArray(
+                    uniqueElements: (1...18).map {
+                        "Sticker\($0)"
+                    }.map {
+                        Sticker.State(id: UUID(), imageName: $0)
+                    }
+                )
                 return .none
             case .stickers(.element(id: UUID(), action: .didTap)):
                 return .none
